@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "description": "SvelteKit handle hook for the x402 Payment Protocol",
   "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
-  "types": "./dist/index.d.ts",
+  "module": "./dist/esm/index.mjs",
+  "types": "./dist/cjs/index.d.ts",
+  "sideEffects": false,
   "scripts": {
+    "prepack": "npm run build",
     "test": "vitest run",
     "test:watch": "vitest",
     "build": "tsup",
@@ -25,6 +27,14 @@
   "license": "Apache-2.0",
   "author": "James Risberg",
   "repository": "https://github.com/jamesrisberg/x402-sveltekit",
+  "homepage": "https://github.com/jamesrisberg/x402-sveltekit#readme",
+  "bugs": "https://github.com/jamesrisberg/x402-sveltekit/issues",
+  "engines": {
+    "node": ">=18.13"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@eslint/js": "^9.24.0",
     "@sveltejs/kit": "^2.50.1",
