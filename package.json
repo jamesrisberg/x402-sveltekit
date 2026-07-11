@@ -1,0 +1,71 @@
+{
+  "name": "@jamesrisberg/x402-sveltekit",
+  "version": "0.1.0",
+  "description": "SvelteKit handle hook for the x402 Payment Protocol",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build": "tsup",
+    "watch": "tsc --watch",
+    "format": "prettier -c .prettierrc --write \"**/*.{ts,js,cjs,json,md}\"",
+    "format:check": "prettier -c .prettierrc --check \"**/*.{ts,js,cjs,json,md}\"",
+    "lint": "eslint . --ext .ts --fix",
+    "lint:check": "eslint . --ext .ts"
+  },
+  "keywords": [
+    "x402",
+    "sveltekit",
+    "payments",
+    "micropayments",
+    "402"
+  ],
+  "license": "Apache-2.0",
+  "author": "James Risberg",
+  "repository": "https://github.com/jamesrisberg/x402-sveltekit",
+  "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "@sveltejs/kit": "^2.50.1",
+    "@types/node": "^22.13.4",
+    "@typescript-eslint/eslint-plugin": "^8.29.1",
+    "@typescript-eslint/parser": "^8.29.1",
+    "eslint": "^9.24.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsdoc": "^50.6.9",
+    "eslint-plugin-prettier": "^5.2.6",
+    "prettier": "3.5.2",
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  },
+  "dependencies": {
+    "@x402/core": "^2.18.0",
+    "@x402/extensions": "^2.18.0"
+  },
+  "peerDependencies": {
+    "@sveltejs/kit": "^2.0.0",
+    "@x402/paywall": "^2.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@x402/paywall": {
+      "optional": true
+    }
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.mts",
+        "default": "./dist/esm/index.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ]
+}
