@@ -126,7 +126,7 @@ export const GET = () => {
 
 - Runs on Node-based SvelteKit adapters (`adapter-node`, `adapter-vercel`, `adapter-auto` on Node runtimes). Edge runtimes without `Buffer` are untested.
 - Payment is enforced in the handle hook, so protected routes stay plain SvelteKit handlers — no wrapping required.
-- Seen in the wild: [jamesrisberg.xyz/tollbooth](https://www.jamesrisberg.xyz/tollbooth)
+- Seen in the wild: [jamesrisberg.xyz/xanadureborn](https://www.jamesrisberg.xyz/xanadureborn)
 
 ## Related
 
