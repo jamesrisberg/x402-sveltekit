@@ -1,0 +1,7 @@
+node_modules/
+.svelte-kit/
+build/
+.env
+scripts/burner.key
+.channels/
+scripts/.client-channels/
